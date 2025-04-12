@@ -1,0 +1,49 @@
+﻿@model SocialMedia
+
+@{
+    ViewData["Title"] = "CreateSocialMedia";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Sosyal Medya</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Sosyal Medya Ekle</div>
+                    </div>
+                    <div class="card-body">
+
+                        <form asp-action="CreateSocialMedia" method="post">
+                            <div class="form-group">
+                                <label asp-for="Title">Sosyal Medya</label>
+                                <input asp-for="Title" class="form-control" />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Url">Sosyal Medya Url</label>
+                                <input asp-for="Url" class="form-control" />
+                                <span asp-validation-for="Url" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Icon">Sosyal Medya Icon</label>
+                                <input asp-for="Icon" type="text" class="form-control" />
+                                <span asp-validation-for="Icon" class="text-danger"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                        </form>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
